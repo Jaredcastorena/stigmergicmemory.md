@@ -1,0 +1,34 @@
+{
+  "name": "stigmergicmemory.md",
+  "version": "0.1.0",
+  "protocol_version": 1,
+  "attribution": "made by jared castorena 1728studios llc",
+  "attribution_requested": true,
+  "formal_license": null,
+  "entrypoints": {
+    "overview": "README.md",
+    "instructions": "AGENTS.md",
+    "evolution": "stigmergicmemory.md",
+    "mail": "stigmergichat.md",
+    "protocol": "PROTOCOL.md",
+    "cli": "docs/CLI.md"
+  },
+  "templates": "templates/",
+  "helper": "tools/stigmergy.py",
+  "runtime": "Python 3.10+ standard library",
+  "capabilities": [
+    "private workspace initialization",
+    "bounded memory checkpoints",
+    "full prior archives and topic indexes",
+    "goal acceptance and revision guards",
+    "bounded mail with stable cursors"
+  ],
+  "not_implemented": [
+    "author authentication",
+    "native notification adapters",
+    "scheduler",
+    "automatic context reset",
+    "runtime isolation"
+  ],
+  "adoption_requires_project_authorization": true
+}
