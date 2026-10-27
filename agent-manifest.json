@@ -1,6 +1,6 @@
 {
   "name": "stigmergicmemory.md",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "protocol_version": 1,
   "attribution": "made by jared castorena 1728studios llc",
   "attribution_requested": true,
@@ -11,7 +11,10 @@
     "evolution": "stigmergicmemory.md",
     "mail": "stigmergichat.md",
     "protocol": "PROTOCOL.md",
-    "cli": "docs/CLI.md"
+    "cli": "docs/CLI.md",
+    "contract": "agent-contract.json",
+    "schemas": "schemas/records.schema.json",
+    "background": "docs/OVERVIEW.md"
   },
   "templates": "templates/",
   "helper": "tools/stigmergy.py",
@@ -21,7 +24,10 @@
     "bounded memory checkpoints",
     "full prior archives and topic indexes",
     "goal acceptance and revision guards",
-    "bounded mail with stable cursors"
+    "bounded mail with stable cursors",
+    "byte-bounded resume packets",
+    "stable error codes and recovery actions",
+    "machine-readable command and record contracts"
   ],
   "not_implemented": [
     "author authentication",
@@ -30,5 +36,22 @@
     "automatic context reset",
     "runtime isolation"
   ],
-  "adoption_requires_project_authorization": true
+  "adoption_requires_project_authorization": true,
+  "interface_version": 2,
+  "primary_consumer": "agent",
+  "default_entrypoint": "AGENTS.md",
+  "bootstrap": [
+    "project instructions",
+    "AGENTS.md",
+    "agent-manifest.json",
+    "contract --operation resume",
+    "resume",
+    "goal read ID"
+  ],
+  "on_demand_only": [
+    "stigmergicmemory.md",
+    "docs/OVERVIEW.md",
+    "PROTOCOL.md",
+    "docs/SECURITY.md"
+  ]
 }

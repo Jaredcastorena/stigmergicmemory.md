@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stigmergic stored records v1 and CLI errors v2",
+  "description": "made by jared castorena 1728studios llc. Structural constraints. Helper additionally enforces nonblank text, unique IDs, reply order, body digests, state semantics and compare-before-write guards. No authentication claim.",
+  "$ref": "#/$defs/goals",
+  "$defs": {
+    "text500": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^[^\\u0000-\\u001f]*$"
+    },
+    "text1000": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000,
+      "pattern": "^[^\\u0000-\\u001f]*$"
+    },
+    "goal": {
+      "type": "object",
+      "required": [
+        "id",
+        "objective",
+        "owner",
+        "acceptance",
+        "next_action",
+        "status",
+        "evidence",
+        "acceptance_reviewed",
+        "updated_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+        },
+        "objective": {
+          "$ref": "#/$defs/text1000"
+        },
+        "owner": {
+          "$ref": "#/$defs/text500"
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text1000"
+          },
+          "minItems": 1
+        },
+        "next_action": {
+          "$ref": "#/$defs/text1000"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "blocked",
+            "paused",
+            "completed"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text1000"
+          }
+        },
+        "acceptance_reviewed": {
+          "type": "boolean"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/text1000"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "updated_at": {
+          "$ref": "#/$defs/text1000"
+        }
+      }
+    },
+    "goals": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "revision",
+        "goals"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "integer",
+          "const": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/goal"
+          }
+        },
+        "attribution": {
+          "type": "string"
+        }
+      }
+    },
+    "mail_metadata": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "id",
+        "utc",
+        "author",
+        "to",
+        "kind",
+        "title",
+        "next_owner",
+        "evidence",
+        "body_sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "integer",
+          "const": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^msg-[0-9]{8}T[0-9]{12}Z-[0-9a-f]{12}$"
+        },
+        "utc": {
+          "$ref": "#/$defs/text500"
+        },
+        "author": {
+          "$ref": "#/$defs/text500"
+        },
+        "to": {
+          "$ref": "#/$defs/text500"
+        },
+        "kind": {
+          "enum": [
+            "assignment",
+            "blocker",
+            "interface",
+            "completion",
+            "decision"
+          ]
+        },
+        "title": {
+          "$ref": "#/$defs/text500"
+        },
+        "reply_to": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^msg-[0-9]{8}T[0-9]{12}Z-[0-9a-f]{12}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "next_owner": {
+          "$ref": "#/$defs/text500"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text1000"
+          }
+        },
+        "body_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "ok",
+        "interface_version",
+        "error"
+      ],
+      "properties": {
+        "ok": {
+          "const": false
+        },
+        "interface_version": {
+          "const": 2
+        },
+        "error": {
+          "type": "object",
+          "required": [
+            "code",
+            "message",
+            "recovery"
+          ],
+          "properties": {
+            "code": {
+              "enum": [
+                "E_USAGE",
+                "E_INVALID_INPUT",
+                "E_NOT_INITIALIZED",
+                "E_ALREADY_INITIALIZED",
+                "E_STALE_MEMORY",
+                "E_STALE_GOAL",
+                "E_LOCKED",
+                "E_MISSING_CURSOR",
+                "E_NOT_FOUND",
+                "E_MAIL_INTEGRITY",
+                "E_GOAL_INTEGRITY",
+                "E_ARCHIVE_INTEGRITY",
+                "E_UNSAFE_PATH",
+                "E_IO"
+              ]
+            },
+            "message": {
+              "type": "string"
+            },
+            "recovery": {
+              "enum": [
+                "check_id",
+                "correct_arguments",
+                "correct_input",
+                "initialize_if_authorized",
+                "inspect_filesystem",
+                "inspect_lock_owner",
+                "locate_prior_record",
+                "reread_and_reconcile",
+                "resume_existing_state",
+                "stop_and_inspect"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

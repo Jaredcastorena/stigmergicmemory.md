@@ -19,6 +19,8 @@ Maintain continuity when a task outlasts a context window or changes owners. Pre
 7. **Honest verification and privacy.** Decisive failures and limitations stayed recorded. Checks were selected for the changed behavior. Working records and all private references stayed out of public source and exports; public summaries were written separately.
 8. **Portable starter.** The reusable rules became templates plus optional dependency-free tooling. Goals gained explicit ownership, acceptance and state revisions. Repository discovery became an invitation to evaluate the protocol, not automatic authorization to install or act.
 
+9. **Executable agent entrypoint.** A human tutorial was too indirect for resuming agents. The default route became an execution contract, structured record schemas, byte-bounded resume packets and stable recovery codes. History moved off the startup path; readable prose remained an optional reference.
+
 ## Decisions retained
 
 - Aim for 4 KB / 60 lines of current memory; avoid cosmetic rewrites just to meet an advisory target.
