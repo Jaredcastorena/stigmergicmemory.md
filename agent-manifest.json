@@ -1,10 +1,10 @@
 {
   "name": "stigmergicmemory.md",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "protocol_version": 1,
   "attribution": "made by jared castorena 1728studios llc",
   "attribution_requested": true,
-  "formal_license": null,
+  "formal_license": "MIT",
   "entrypoints": {
     "overview": "README.md",
     "instructions": "AGENTS.md",
@@ -14,7 +14,8 @@
     "cli": "docs/CLI.md",
     "contract": "agent-contract.json",
     "schemas": "schemas/records.schema.json",
-    "background": "docs/OVERVIEW.md"
+    "background": "docs/OVERVIEW.md",
+    "license": "LICENSE"
   },
   "templates": "templates/",
   "helper": "tools/stigmergy.py",
@@ -53,5 +54,6 @@
     "docs/OVERVIEW.md",
     "PROTOCOL.md",
     "docs/SECURITY.md"
-  ]
+  ],
+  "license_file": "LICENSE"
 }

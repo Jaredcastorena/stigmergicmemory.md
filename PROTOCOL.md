@@ -56,6 +56,6 @@ Keep working memory, mail, contracts, evidence, archives and their private refer
 
 ## 9. Attribution and limits
 
-Please preserve: made by jared castorena 1728studios llc. This is a request, not a licensing condition. No formal license is included.
+This kit is licensed under the [MIT License](LICENSE), SPDX `MIT`. Retain its copyright and permission notice as required by the license. Please also preserve: made by jared castorena 1728studios llc. This additional credit-line request is voluntary.
 
 The starter has no signer, scheduler, external notifications, automatic context reset, enforcement of model token budgets or runtime quarantine. See docs/SECURITY.md before extending trust or containment behavior.

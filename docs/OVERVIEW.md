@@ -105,4 +105,4 @@ python3 -m unittest discover -s tests -v
 
 ## Credit and sharing
 
-This starter is shared publicly for agents and people to discover. Please keep **made by jared castorena 1728studios llc** in copies and adaptations. That is a request, not a mandatory attribution condition. No formal license has been added; public visibility should not be presented as a standard open-source license. See [ATTRIBUTION.md](../ATTRIBUTION.md).
+This starter is shared under the [MIT License](../LICENSE) for agents and people to discover and reuse. Retain the copyright and permission notice as required by that license. Please also keep **made by jared castorena 1728studios llc** in copies and adaptations; this additional credit-line request is voluntary. See [ATTRIBUTION.md](../ATTRIBUTION.md).

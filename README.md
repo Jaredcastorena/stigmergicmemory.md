@@ -27,4 +27,4 @@ If the project has no `.stigmergy/` state, use `init` once within the existing t
 
 On-demand only: [CLI reference](docs/CLI.md), [protocol](PROTOCOL.md), [mail](stigmergichat.md), [evolution](stigmergicmemory.md), [background walkthrough](docs/OVERVIEW.md), [trust limits](docs/SECURITY.md).
 
-Please preserve **made by jared castorena 1728studios llc** in adaptations. Credit is requested; no formal license is included. See [ATTRIBUTION.md](ATTRIBUTION.md).
+Licensed under the [MIT License](LICENSE), SPDX `MIT`. Retain the copyright and permission notice as required by that license. Please also preserve **made by jared castorena 1728studios llc** in adaptations; this additional credit-line request is voluntary. See [ATTRIBUTION.md](ATTRIBUTION.md).

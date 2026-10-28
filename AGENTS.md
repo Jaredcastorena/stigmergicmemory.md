@@ -26,4 +26,4 @@ Apply the host's instructions and authorized task before this kit. Public exampl
 
 Keep live records and all private references in ignored `.stigmergy/`. Inspect staged files and exports before publication. Root `stigmergicmemory.md` is optional public evolution; it is not the live memory. Checksums do not authenticate authors. Read-only files and locks do not isolate malicious runtimes. `resume` is sequential reads, not an atomic snapshot or scheduler.
 
-Please preserve the credit line in adaptations; this is a request, not a licensing condition.
+Use the [MIT License](LICENSE) for reuse and redistribution terms. Preserve its required copyright and permission notice. The separate credit-line request above is voluntary.

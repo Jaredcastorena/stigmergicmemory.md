@@ -21,6 +21,8 @@ Maintain continuity when a task outlasts a context window or changes owners. Pre
 
 9. **Executable agent entrypoint.** A human tutorial was too indirect for resuming agents. The default route became an execution contract, structured record schemas, byte-bounded resume packets and stable recovery codes. History moved off the startup path; readable prose remained an optional reference.
 
+10. **Explicit reuse terms.** The starter adopted the standard MIT license so agents can identify reuse terms through an SPDX identifier and a canonical license file. The additional credit-line request remained voluntary.
+
 ## Decisions retained
 
 - Aim for 4 KB / 60 lines of current memory; avoid cosmetic rewrites just to meet an advisory target.

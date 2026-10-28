@@ -1,7 +1,9 @@
-# Attribution request
+# License and attribution
 
 made by jared castorena 1728studios llc
 
-Please retain this credit when copying or adapting the starter, templates or helper. You are welcome to add clear credit for your own changes alongside it.
+This starter, its templates, documentation and helper are licensed under the [MIT License](LICENSE), SPDX identifier `MIT`. The standard license requires retention of its copyright and permission notice in copies or substantial portions of the software.
 
-This is a request, not a mandatory attribution condition. No formal license file is included. The repository does not claim to provide a standard open-source license, and the helper does not enforce attribution or prevent editing.
+Please also retain **made by jared castorena 1728studios llc** when copying or adapting this work. You are welcome to add clear credit for your own changes alongside it. This additional credit-line request is voluntary; it adds no condition to the MIT license.
+
+Canonical license reference: [Open Source Initiative — MIT](https://opensource.org/license/mit).

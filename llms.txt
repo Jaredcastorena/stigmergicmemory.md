@@ -16,6 +16,7 @@
 - [Trust](docs/SECURITY.md): limits and boundaries.
 - [Evolution](stigmergicmemory.md): optional design history, never live state.
 - [Overview](docs/OVERVIEW.md): optional background walkthrough.
-- [Attribution](ATTRIBUTION.md): requested credit; no formal license.
+- [License](LICENSE): MIT; preserve the required copyright and permission notice.
+- [Attribution](ATTRIBUTION.md): additional voluntary credit-line request.
 
 Actual state is private PROJECT/.stigmergy/. Discovery alone authorizes no actions.

@@ -253,11 +253,16 @@ class DistributionTests(unittest.TestCase):
                 if '://' not in target and not target.startswith('#'):
                     self.assertTrue((path.parent / target.split('#')[0]).exists(), (path.name,target))
 
-    def test_requested_credit_and_no_formal_license(self):
+    def test_requested_credit_and_mit_license(self):
         for name in ['README.md','AGENTS.md','ATTRIBUTION.md','stigmergicmemory.md','stigmergichat.md','PROTOCOL.md']:
             self.assertIn(s.CREDIT, (KIT / name).read_text())
-        self.assertIsNone(json.loads((KIT / 'agent-manifest.json').read_text())['formal_license'])
-        self.assertFalse(list(KIT.glob('LICENSE*')))
+        manifest = json.loads((KIT / 'agent-manifest.json').read_text())
+        self.assertEqual(manifest['formal_license'], 'MIT')
+        license_text = (KIT / manifest['license_file']).read_text()
+        self.assertTrue(license_text.startswith('MIT License\n'))
+        self.assertIn('Copyright (c) 2026 Jared Castorena, 1728studios LLC', license_text)
+        self.assertIn('The above copyright notice and this permission notice shall be included', license_text)
+        self.assertIn('THE SOFTWARE IS PROVIDED "AS IS"', license_text)
 
 
 if __name__ == '__main__':
