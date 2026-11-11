@@ -23,12 +23,15 @@ Maintain continuity when a task outlasts a context window or changes owners. Pre
 
 10. **Explicit reuse terms.** The starter adopted the standard MIT license so agents can identify reuse terms through an SPDX identifier and a canonical license file. The additional credit-line request remained voluntary.
 
+11. **Ownership of the next action.** A concise handoff that names a next action is read by any agent that finds it as an assignment, including agents with no authorization for that work and no stake in its outcome. Discovery language governs protocol adoption but not task pickup. The owner named for a next action became the only agent allowed to take it; any other reader reports what it found and stops. Genuinely open ownership is written as `owner: unassigned` rather than left implied, because an unstated owner is read as a vacancy. This adds no new role, record or gate: ownership already existed for goals and mail, and a memory that names an action without an owner was always incomplete.
+
 ## Decisions retained
 
 - Aim for 4 KB / 60 lines of current memory; avoid cosmetic rewrites just to meet an advisory target.
 - Archive complete previous content before compression; reject stale writes.
 - Use full records on disk and narrow references in context.
 - Mail meaningful assignments, blockers, interface changes and completions once.
+- Only the owner named for a next action takes it. Reading a memory is not assignment.
 - Verify actual outcomes. A green status or a checksum is not proof of factual correctness.
 - Keep private task state separate from deliberately published examples.
 

@@ -17,3 +17,5 @@ Keep only decisions and dependencies that change the next action. Longer rationa
 ## Next action and owner
 
 Name one useful next action, its owner and any required input. Update this file at meaningful checkpoints, not every command.
+
+Only the named owner takes that action. Reading this file is not assignment: a reader who is not the owner reports what was found and stops. Where ownership is genuinely open, write `owner: unassigned` here rather than leaving it implied.

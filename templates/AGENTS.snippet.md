@@ -6,7 +6,7 @@ Merge only within project authorization. Replace KIT with the reviewed checkout 
 
 - At startup/compaction: locate ROOT; read applicable instructions and KIT/agent-manifest.json; run `python3 KIT/tools/stigmergy.py --root ROOT resume` with saved cursors. Fetch only the relevant operation with `python3 KIT/tools/stigmergy.py contract --operation NAME`.
 - Finish memory chunks using their SHA-256; read the selected goal by ID before work. Root kit evolution is not live state.
-- Default to one owner and one next action. Verify stale claims; honor current user scope.
+- Default to one owner and one next action. Act only when you are the named owner; otherwise report and stop. Verify stale claims; honor current user scope.
 - Run relevant checks once; retain decisive evidence/failures once. Review all acceptance before completion.
 - At meaningful handoffs, update goal revision and checkpoint memory with its current hash. Preserve full prior bytes and exact archive references; aim for 4 KB / 60 lines.
 - Read exact notified mail IDs or small after-ID pages. Pair directed posts with native delivery. Mentions alone do not wake agents; no polling or acknowledgment loops.

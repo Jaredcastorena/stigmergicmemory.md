@@ -26,7 +26,7 @@ Archives are local continuity records, not cryptographic proof of authorship. Fi
 
 ## 4. Ownership and delegation
 
-Default to one owner. Delegate only authorized, independent work with a narrow fresh packet: goal, owned files, relevant inputs, acceptance and a practical stop condition. One shared handoff contract is enough for dependent work. Reuse it through routine edits and repairs; update it when ownership, interfaces or acceptance actually change.
+Default to one owner. Only the owner named for a next action takes it. Reading a memory is not assignment: another reader reports what it found and stops. Open ownership is written as `owner: unassigned`, not left implied, because an unstated owner is read by the next agent as a vacancy. Delegate only authorized, independent work with a narrow fresh packet: goal, owned files, relevant inputs, acceptance and a practical stop condition. One shared handoff contract is enough for dependent work. Reuse it through routine edits and repairs; update it when ownership, interfaces or acceptance actually change.
 
 A worker posts one meaningful completion and stops. No idle watchers, relay-only agents or repeated approval requests for work already authorized.
 

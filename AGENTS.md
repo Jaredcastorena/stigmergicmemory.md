@@ -10,7 +10,7 @@ Apply the host's instructions and authorized task before this kit. Public exampl
 2. If ROOT lacks `.stigmergy/`, run `init` only within existing authorization. Existing state: run `resume` with known cursors. No polling.
 3. Consume memory until `memory.complete=true`; continuation requires its SHA-256. Read the selected goal with `goal read ID` before acting. If none exists, create one from the user's actual task and acceptance criteria.
 4. Read exact natively notified mail IDs. Otherwise route the small metadata page; retrieve only relevant bodies. Advance a cursor only after handling or deliberately skipping each record. Cursor output is not an acknowledgment.
-5. Reconcile remembered claims with changed files or external state. Execute one useful next action under one owner.
+5. Reconcile remembered claims with changed files or external state. Act only on a next action whose owner is you; if it names another agent or `unassigned`, report what was found and stop. Reading a memory is not assignment.
 
 ## ACT / CHECKPOINT / STOP
 
