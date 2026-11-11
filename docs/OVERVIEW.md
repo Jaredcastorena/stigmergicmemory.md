@@ -48,7 +48,7 @@ For a manual setup, copy [templates](../templates/) into a private working direc
 ## A short working cycle
 
 1. Read the small current memory and relevant goal. Verify stale claims against actual files or external state.
-2. Select the next useful action and one owner. Delegate only independent work that saves more effort than coordination costs.
+2. Select the next useful action and one owner. Only that owner acts; another reader reports what it found and stops. Delegate only independent work that saves more effort than coordination costs.
 3. Implement the action. Run the checks needed to support the claim; retain decisive failures.
 4. Update goal state with evidence, then checkpoint memory at a meaningful milestone or handoff.
 5. Read a notified mail ID directly. Use an after-ID cursor for newly arrived messages.

@@ -49,7 +49,7 @@
     },
     {
       "state": "act",
-      "action": "one owner performs one useful authorized step; checks affected behavior once",
+      "action": "the named owner performs one useful authorized step; checks affected behavior once; a reader who is not that owner reports what was found and stops",
       "next": "checkpoint"
     },
     {
@@ -390,7 +390,7 @@
     "Private live state under ROOT/.stigmergy; inspect staged content and exports.",
     "Memory target <=4096 bytes/60 lines; hard final ceiling 12288 bytes/80 lines including archive footer.",
     "Checkpoint preserves complete old bytes and topic index; archives are cooperative read-only records.",
-    "One owner by default; delegate only authorized independent work with a narrow packet.",
+    "One owner by default; only the owner named for a next action takes it, and any other reader reports what it found and stops. Delegate only authorized independent work with a narrow packet.",
     "Mail bodies <=4000 UTF-8 bytes; exact IDs, native delivery, no acknowledgment loops or polling.",
     "Mail authors remain unverified; checksums and file permissions are not authentication or containment."
   ],
